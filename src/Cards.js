@@ -2,10 +2,10 @@ import { Text, StyleSheet, View, ImageBackground, TouchableOpacity } from 'react
 import React from 'react'
 import { deviceHeight, deviceWidth } from './Dimensions'
 
-export default function Cards({ name, image }) {
+export default function Cards({ name, image, navigation }) {
     return (
         <View>
-            <TouchableOpacity style={{ paddingHorizontal: 16 }} onPress={() => { }}>
+            <TouchableOpacity style={{ paddingHorizontal: 16 }} onPress={() => navigation.navigate('Details', { name })}>
                 <ImageBackground
                     source={image}
                     style={styles.image}
